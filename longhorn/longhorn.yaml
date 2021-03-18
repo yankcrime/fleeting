@@ -11,7 +11,7 @@ metadata:
   namespace: longhorn-system
 spec:
   repo: https://charts.longhorn.io
-  chart: longhorn/longhorn
+  chart: longhorn
   targetNamespace: longhorn-system
   set:
     defaultSettings.defaultDataPath: "/longhorn"
