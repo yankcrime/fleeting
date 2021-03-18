@@ -1,0 +1,25 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gatekeeper-system
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: rancher-gatekeeper-crd
+  namespace: gatekeeper-system
+spec:
+  repo: https://charts.rancher.io
+  chart: rancher-gatekeeper-crd
+  targetNamespace: gatekeeper-system
+---
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: rancher-gatekeeper
+  namespace: gatekeeper-system
+spec:
+  repo: https://charts.rancher.io
+  chart: rancher-gatekeeper
+  targetNamespace: gatekeeper-system
