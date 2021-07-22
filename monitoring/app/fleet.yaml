@@ -10,8 +10,11 @@ diff:
     name: rancher-monitoring-admission
     operations:
     - {"op":"remove", "path":"/webhooks/0/failurePolicy"}
+    - {"op":"remove", "path":"/webhooks/0/matchPolicy"}
+    - {"op":"remove", "path":"/webhooks/0/reinvocationPolicy"}
     - {"op":"remove", "path":"/admission-prometheusrules/mutate"}
     - {"op":"remove", "path":"/webhooks/0/clientConfig.caBundle"}
+    - {"op":"remove", "path":"/webhooks/0/clientConfig.service"}
     - {"op": "remove", "path":"/webhooks/0/rules"}
   - apiVersion: admissionregistration.k8s.io/v1
     kind: ValidatingWebhookConfiguration
