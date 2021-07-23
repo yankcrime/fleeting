@@ -3,6 +3,14 @@ helm:
   releaseName: loki
   repo: https://grafana.github.io/helm-charts
   chart: loki
+  values:
+    persistence:
+      enabled: true
+      accessModes:
+        - ReadWriteOnce
+      size: 10Gi
+    serviceMonitor:
+      enabled: true
 diff:
   comparePatches:
   - apiVersion: policy/v1beta1
