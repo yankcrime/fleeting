@@ -1,0 +1,15 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
+metadata:
+  name: fleeting
+  namespace: fleet-default
+spec:
+  repo: https://github.com/yankcrime/fleeting.git
+  branch: master
+  insecureSkipTLSVerify: false
+  paths:
+  - /longhorn
+  - /monitoring
+  - /logging
+  targets:
+  - clusterSelector: {}
