@@ -14,4 +14,4 @@ spec:
   chart: longhorn
   targetNamespace: longhorn-system
   set:
-    defaultSettings.defaultDataPath: "/longhorn"
+    defaultSettings.defaultDataPath: "/srv/longhorn"
