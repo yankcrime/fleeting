@@ -13,6 +13,7 @@ spec:
   loki:
     url: http://loki.loki:3100
     configure_kubernetes_labels: true
+    extract_kubernetes_labels: true
 ---
 apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterFlow
