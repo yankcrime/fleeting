@@ -4,12 +4,13 @@ helm:
   repo: https://grafana.github.io/helm-charts
   chart: loki-stack
   values:
-    persistence:
-      enabled: true
-      accessModes:
-        - ReadWriteOnce
-      size: 30Gi
-      storageClassName: 'longhorn'
+    loki:
+      persistence:
+        enabled: true
+        accessModes:
+          - ReadWriteOnce
+        size: 30Gi
+        storageClassName: 'longhorn'
     serviceMonitor:
       enabled: true
 diff:
