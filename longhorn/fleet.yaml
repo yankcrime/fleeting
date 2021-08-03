@@ -1,0 +1,8 @@
+defaultNamespace: longhorn-system
+helm:
+  releaseName: longhorn
+  repo: https://charts.longhorn.io
+  chart: longhorn
+  values:
+    defaultSettings:
+      defaultDataPath: "/srv/longhorn"
