@@ -3,17 +3,17 @@ helm:
   releaseName: rancher-monitoring
   repo: https://charts.rancher.io
   chart: rancher-monitoring
-values:
-  prometheus:
-    storageSpec:
-      volumeClaimTemplate:
-        spec:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: "50Gi"
-          volumeMode: Filesystem
+  values:
+    prometheus:
+      storageSpec:
+        volumeClaimTemplate:
+          spec:
+            accessModes:
+              - ReadWriteOnce
+            resources:
+              requests:
+                storage: "10Gi"
+            volumeMode: Filesystem
 diff:
   comparePatches:
   - apiVersion: admissionregistration.k8s.io/v1

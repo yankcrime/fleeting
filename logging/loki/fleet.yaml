@@ -9,7 +9,7 @@ helm:
         enabled: true
         accessModes:
           - ReadWriteOnce
-        size: 30Gi
+        size: 10Gi
         storageClassName: 'longhorn'
     serviceMonitor:
       enabled: true
