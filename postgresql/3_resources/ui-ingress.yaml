@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: postgresql-ui
+  namespace: postgresql
+spec:
+  rules:
+  - host: "postgresql.192.168.20.230.dnsify.me"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: postgresql-ui-postgres-operator-ui
+            port:
+              number: 80
+
