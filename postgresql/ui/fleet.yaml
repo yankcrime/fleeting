@@ -1,0 +1,3 @@
+defaultNamespace: postgresql
+helm:
+  releaseName: postgresql-ui
