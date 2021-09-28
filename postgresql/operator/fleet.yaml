@@ -1,3 +1,10 @@
 defaultNamespace: postgresql
 helm:
   releaseName: postgresql
+
+diff:
+  comparePatches:
+  - apiVersion: apps/v1
+    kind: postgresqls.acid.zalan.do
+    operations:
+    - {"op":"remove", "path":"/spec/versions"}
