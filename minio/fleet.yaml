@@ -36,9 +36,9 @@ helm:
             tls:
               - hosts:
                   - minio.192.168.20.104.dnsify.me
-                  secretName: miniosecret-tls
-                  host: minio.192.168.20.104.dnsify.me
-                  path: /
+                secretName: miniosecret-tls
+            host: minio.192.168.20.104.dnsify.me
+            path: /
                   
     tenants: []
       
