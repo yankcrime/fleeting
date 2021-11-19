@@ -1,6 +1,5 @@
 ---
 defaultNamespace: minio-system
-
 helm:
   releaseName: minio
   repo: https://operator.min.io/

@@ -6,4 +6,4 @@ kind: Secret
 type: kubernetes.io/tls
 metadata:
   name: miniosecret-tls
-  namespace: minio-operator
+  namespace: minio-system
