@@ -1,0 +1,45 @@
+---
+defaultNamespace: minio-system
+
+helm:
+  releaseName: minio
+  repo: https://operator.min.io/
+  chart: minio-operator
+  values:
+    operator:
+      image:
+        repository: minio/operator
+        tag: v4.3.5
+        pullPolicy: IfNotPresent
+        replicaCount: 1
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+          runAsNonRoot: true
+          fsGroup: 1000
+          resources:
+            requests:
+              cpu: 200m
+              memory: 256Mi
+              ephemeral-storage: 500Mi
+    console:
+      image:
+        repository: minio/console
+        tag: v0.12.3
+        pullPolicy: IfNotPresent
+        imagePullSecrets: [ ]
+        replicaCount: 1
+        securityContext:
+          runAsUser: 1000
+          runAsNonRoot: true
+          ingress:
+            enabled: true
+            tls:
+              - hosts:
+                  - minio.192.168.20.104.dnsify.me
+                  secretName: miniosecret-tls
+                  host: minio.192.168.20.104.dnsify.me
+                  path: /
+                  
+    tenants: []
+      
