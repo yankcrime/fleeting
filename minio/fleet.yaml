@@ -34,3 +34,11 @@ helm:
       - hosts:
           - minio.192.168.20.240.dnsify.me
         secretName: minio.192.168.20.240.dnsify.me-tls
+    provisioning:
+      buckets:
+        - name: rancher-backups
+      users:
+        - username: rancher-backup
+          password: "7f072d1c-99f7-42a9-bdff-69c73e1e4de9"
+          policies:
+            - readwrite
