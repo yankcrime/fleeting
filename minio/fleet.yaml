@@ -35,6 +35,7 @@ helm:
           - minio.192.168.20.240.dnsify.me
         secretName: minio.192.168.20.240.dnsify.me-tls
     provisioning:
+      enabled: true
       buckets:
         - name: rancher-backups
       users:
