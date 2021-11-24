@@ -5,6 +5,9 @@ helm:
   releaseName: minio
   chart: ./chart/
   values:
+    auth:
+      rootUser: admin
+      rootPassword: "46094cb9-ccee-497d-bef7-9614487ad40d"
     mode: distributed
     statefulset:
       replicaCount: 4
