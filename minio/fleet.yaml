@@ -3,7 +3,6 @@ defaultNamespace: minio
 
 helm:
   releaseName: minio
-  repo: https://operator.min.io/
   chart: ./chart/
   values:
     mode: distributed
