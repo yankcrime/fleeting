@@ -10,7 +10,6 @@ helm:
         accessModes:
           - ReadWriteOnce
         size: 10Gi
-        storageClassName: 'longhorn'
     serviceMonitor:
       enabled: true
 diff:
