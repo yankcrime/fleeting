@@ -10,14 +10,14 @@ helm:
         accessModes:
           - ReadWriteOnce
         size: 10Gi
+      ingress:
+        enabled: true
+        hosts:
+          - host: loki.tetromino.io
+            paths: ["/"]
+        tls: []
     serviceMonitor:
       enabled: true
-    ingress:
-      enabled: true
-      hosts:
-        - host: loki.tetromino.io
-          paths: ["/"]
-      tls: []
 diff:
   comparePatches:
   - apiVersion: policy/v1beta1
