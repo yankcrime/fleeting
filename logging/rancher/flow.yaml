@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: cattle-logging-system
+  name: rancher-logging
 ---
 apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterOutput
 metadata:
   name: loki
-  namespace: cattle-logging-system
+  namespace: rancher-logging
 spec:
   loki:
     url: http://loki.tetromino.io
@@ -19,7 +19,7 @@ apiVersion: logging.banzaicloud.io/v1beta1
 kind: ClusterFlow
 metadata:
   name: all-logs-to-loki
-  namespace: cattle-logging-system
+  namespace: rancher-logging
 spec:
   globalOutputRefs:
     - loki
