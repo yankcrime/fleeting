@@ -11,7 +11,7 @@ metadata:
   namespace: cattle-logging-system
 spec:
   loki:
-    url: http://loki.loki:3100
+    url: http://loki.tetromino.io
     configure_kubernetes_labels: true
     extract_kubernetes_labels: true
 ---
